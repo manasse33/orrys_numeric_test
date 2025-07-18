@@ -535,6 +535,11 @@
             margin-bottom: 0.5rem;
         }
 
+        .sidebar-service h5 a{
+            text-decoration: none;
+            color: white;
+        }
+
         .overlay {
             position: fixed;
             top: 0;
