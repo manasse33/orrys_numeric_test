@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - OrrysNumeric</title>
+  <link rel="icon" href="../imgs/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../styles/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="headabout">
+      <!-- Logo peut être ajouté ici -->
+    </div>
+
+    <div class="navabout">
+      <ul>
+        <li><a href="../index.html">ACCUEIL</a></li>
+        <li><a href="about.html">À PROPOS</a></li>
+        <li><a href="formations.html">FORMATIONS</a></li>
+        <li><a href="contacts.html" class="active">CONTACT</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="apropos">
+    <img src="../imgs/logo.png" class="logo" alt="logo de OrrysNumeric">
+
+    <div class="contact-container">
+      <div class="iContact">
+        <div class="baner">
+          <p>CONTACTEZ-NOUS</p>
+        </div>
+
+        <div class="contact-info">
+          <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
+          <p><i class="fab fa-whatsapp" id="whatsapp"></i> +242 06-921-53-23</p>
+          <p><i class="fas fa-envelope"></i> infos@orrysnumeric.cg</p>
+          <p><i class="fas fa-map-marker-alt"></i> OCH, Case C4 23, Bzv</p>
+        </div>
+
+        <div class="social">
+          <a href="https://facebook.com/tonpage" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/tonprofil" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://instagram.com/tonprofil" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/in/tonprofil" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://wa.me/242069215323" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="contactez">
+        <div class="map-section">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7196.622344706426!2d15.265835466363352!3d-4.266306476635508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwMTYnMDEuMSJTIDE1wrAxNSc1NS4wIkU!5e0!3m2!1sfr!2scg!4v1751765852275!5m2!1sfr!2scg"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+          <div class="address-info">
+            <p><i class="fas fa-map-marker-alt"></i> OCH, Avenue Maréchal Lyautey, Case C4 23, Moungali, Bzv</p>
+          </div>
+        </div>
+
+        <div class="contact">
+          <h1>Veuillez nous écrire ici :</h1>
+          <div id="successMessage" class="success-message" style="display: none;">
+            <i class="fas fa-check-circle"></i> Votre message a été envoyé avec succès !
+          </div>
+          
+          <form id="contactForm"  action="https://formspree.io/f/xanbwgoa"
+  method="POST">
+            <div class="form-row">
+              <div class="label">
+                <label for="nom">Nom & prénom :</label>
+                <input type="text" name="name" id="nom" class="input" placeholder="Votre nom et prénom" required>
+              </div>
+
+              <!-- <div class="label">
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" name="telephone" id="telephone" class="input" placeholder="Numéro de téléphone" required>
+              </div> -->
+            </div>
+
+            <div class="form-row">
+              <div class="label">
+                <label for="mail">Email :</label>
+                <input type="email" name="email" id="mail" class="input" placeholder="exemple@orrysnumeric.cg" required>
+              </div>
+            </div>
+
+            <div class="label">
+              <label for="message">Message :</label>
+              <textarea name="message" id="message" placeholder="Votre message ici..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Envoyer
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>ORRYS NUMERIC &copy; 2025</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    // Animation au scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Gestion du formulaire
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const form = this;
+      const submitBtn = form.querySelector('.submit-btn');
+      const successMessage = document.getElementById('successMessage');
+      
+      // Animation de chargement
+      form.classList.add('loading');
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+      
+      // Simulation d'envoi (remplacer par votre logique d'envoi)
+      setTimeout(() => {
+        form.classList.remove('loading');
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer';
+        
+        // Afficher le message de succès
+        successMessage.style.display = 'block';
+        successMessage.scrollIntoView({ behavior: 'smooth' });
+        
+        // Réinitialiser le formulaire
+        form.reset();
+        
+        // Masquer le message après 5 secondes
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+        }, 5000);
+        
+        // Alternative avec SweetAlert2
+        Swal.fire({
+          title: 'Message envoyé !',
+          text: 'Nous vous répondrons dans les plus brefs délais.',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#667eea'
+        });
+      }, 2000);
+    });
+
+    // Animation des éléments au chargement
+    document.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.iContact, .contactez');
+      elements.forEach(el => observer.observe(el));
+    });
+
+    // Effet de parallaxe léger sur le logo
+    window.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      const logo = document.querySelector('.logo');
+      if (logo) {
+        logo.style.transform = `translateY(${scrolled * 0.1}px)`;
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+body{
+   
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+body,html{
+
+    min-height:100%;
+    overflow-x:hidden
+}
+
+body{
+    
+    /* background:#a2a09b; */
+    background:-webkit-linear-gradient(315deg,rgb(54, 94, 204) 0,hsla(0, 84%, 45%, 0) 70%),-webkit-linear-gradient(65deg,hsla(220.75,34.93%,26.52%,1) 10%,hsla(220.75,34.93%,26.52%,0) 80%),-webkit-linear-gradient(135deg,hsla(46.42,36.62%,83.92%,1) 15%,hsla(46.42,36.62%,83.92%,0) 80%),-webkit-linear-gradient(205deg,hsla(191.32,50.68%,56.45%,1) 100%,hsla(191.32,50.68%,56.45%,0) 70%);
+    /* background:linear-gradient(135deg,hsla(236.6,0%,53.52%,1) 0,hsla(236.6,0%,53.52%,0) 70%),linear-gradient(25deg,hsla(220.75,34.93%,26.52%,1) 10%,hsla(220.75,34.93%,26.52%,0) 80%),linear-gradient(315deg,hsla(46.42,36.62%,83.92%,1) 15%,hsla(46.42,36.62%,83.92%,0) 80%),linear-gradient(245deg,hsla(191.32,50.68%,56.45%,1) 100%,hsla(191.32,50.68%,56.45%,0) 70%) */
+}
+
+
+
+/* commmence le code de a propos */
+
+/* pour les ecran allant de > 575px */
+
+
+/* pour les ecrans allant de > 575px */
+
+
+.article1,.article2{
+
+    width: 440px;
+    /* background-color: brown; */
+    text-align: justify;   
+    border-radius: 5px; 
+    color: white;
+    /* font-weight: bold; */
+    text-shadow: grey;
+    
+}
+
+em{
+    font-size: 14px;
+    color: white;
+}
+
+
+.para1,.para2{
+    border-radius: 55px  0px 55px;
+    line-height: 30px;
+    display: inline;
+    padding-top: 10px;
+    font-style: italic;
+    color: white;
+    /* background: white; */
+    /* font-size: 14px; */
+}
+
+.infobt{
+    text-align: center;
+}
+
+
+#pdg{
+    width: 160px;
+    height: 160px;
+    border-radius: 105px;
+    background: white;
+    padding: 5px 5px 5px 5px;
+}
+
+#oNum{
+
+    height: 200px;
+}
+
+h3{
+    text-align: center;
+    /* font-size: 20px; */
+    /* color: white; */
+    color: rgb(245, 245, 10);
+
+}
+
+div{
+    width: 100%;
+    float: left;
+    margin-right: 10px;
+}
+
+#apropos{
+
+
+    /* background: rgb(145, 255, 0); */
+    width: 540px;
+    
+    /* nouveau parametre */
+
+    min-height:calc(100vh - 90px);
+    width:100%;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    
+
+}
+
+
+@media only screen and (min-width:1px) and (max-width:575px){
+    
+    /* Les parametres article1 qui est nommé pdg est désactivés pour ne pas l'afficher dans les petits ecran lors du clique du logo Orrys Numerique  */
+   
+    .article1{display: none;}
+
+    .para1{display: none;}
+    
+    /*Les parametres de l'article2 activé c'est l'unique information choisie a afficher */
+    .article2{
+                    /* position:absolute; */
+                    width: 300px;
+                    margin:auto;
+                    /* padding:2%; */
+                    /* background:rgb(54, 94, 204) ; */
+               }
+
+    .para2{
+            /* background-color: rgb(91, 94, 110); */
+            /* font-size: 14px; */
+            border-radius: 0;
+            line-height: 1;
+            /* display: none; */
+            padding-top: 10px;
+            font-style: italic;
+            font-size: 14px;
+            color: white;
+
+        }
+
+    
+}
+
+
+/* Pour les grands écrans les deux informations apparaisent pour les apropos */
+
+@media (min-width:576px){
+
+    .article1,.article2{
+                            width:465px;
+                            margin:auto;
+                            margin-bottom: 12px;
+                            padding:2%;
+                            /* background:rgb(204, 54, 54) ; */
+                    /* text-align: center; */
+
+
+
+                        }
+    
+    .para1,.para2{
+                    /* background-color: rgb(91, 94, 110); */
+                    border-radius: 0;
+                    line-height: 2;
+                    /* display: none; */
+                    padding-top: 10px;
+                    font-style: italic;
+                    /* font-size: 14px; */
+                    color: white;
+
+                }
+    
+   
+
+
+}
