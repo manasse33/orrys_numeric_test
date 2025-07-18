@@ -1,103 +1,195 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
-  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formations</title>
+  <title>Formations – ORRYS NUMERIC</title>
   <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../styles/apropo.css">
-  <link rel="icon" href="../imgs/favicon.png" type="image/png">
-  <!-- <meta http-equiv="pragma" content="no-cache" /> -->
-  <!-- <meta http-equiv="expires" content="-1" /> -->
-
-
+  <link rel="stylesheet" href="../styles/formation.css">
+  <link rel="icon" href="../imgs/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+ 
 </head>
-
-
 <body>
-  <header>
-    <div class="headabout">
-      <!-- <img src="../imgs/logo.png" class="logo" alt="logo de OrrysNumeric"> -->
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <div class="loader-text">ORRYS NUMERIC</div>
     </div>
 
-    <!-- La barre de navigation des menus -->
-    <div class="navabout">
-      <ul>
-        <li><a href="../index.html">ACCUEIL</a></li>
-        <li><a href="about.html">A PROPOS</a></li>
-        <li><a href="formations.html" class="active">FORMATIONS</a></li>
-        <!-- <li><a href="realisations.html">REALISATIONS</a></li> -->
-        <li><a href="contacts.html">CONTACT</a></li>
-      </ul>
-    </div>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
 
+    <!-- Menu Toggle Button -->
+    <button type="button" class="nav-toggler" id="navToggle" aria-label="Toggle navigation">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-logo">ORRYS NUMERIC</div>
+            
+            <div class="sidebar-service">
+                <i class="fas fa-code"></i>
+                <h5>Développement Web</h5>
+                <p>Solutions web modernes et performantes</p>
+            </div>
+
+            <div class="sidebar-service">
+                <i class="fas fa-mobile-alt"></i>
+                <h5>App Mobile</h5>
+                <p>Applications mobiles natives et cross-platform</p>
+            </div>
+
+            <div class="sidebar-service">
+                <i class="fas fa-network-wired"></i>
+                <h5>Réseaux & Télécoms</h5>
+                <p>Infrastructure réseau et télécommunications</p>
+            </div>
+
+            <div class="sidebar-service">
+                <i class="fas fa-shield-alt"></i>
+                <h5>Cybersécurité</h5>
+                <p>Protection et sécurisation des systèmes</p>
+            </div>
+
+            <p style="margin-top: 2rem; text-align: center; opacity: 0.7;">© ORRYS NUMERIC 2025</p>
+        </div>
+    </aside>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="../index.html" class="logo">ORRYS NUMERIC</a>
+      <div class="contact-info">
+        <p><i class="fas fa-map-marker-alt"></i> CASE C4 23 OCH, BZV</p>
+        <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
+      </div>
+    </div>
   </header>
 
-  <div class="apropos">
-    <img src="../imgs/logo.png" class="logo" alt="logo de OrrysNumeric">
+  <!-- Nav -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="../index.html" class="active">ACCUEIL</a></li>
+            <li><a href="../navigation/about.html">À PROPOS</a></li>
+            <!-- <li><a href="#service">SERVICES</a></li> -->
+            <li><a href="../navigation/formations.html">FORMATIONS</a></li>
+            <li><a href="../navigation/contacts.html">CONTACT</a></li>
+    </ul>
+  </nav>
 
-    <div class="chef">
-
-      <h1>Nos formations</h1>
-
-      <video src="../video/reseaux.webm" controls preload="auto" muted width="100%" height="160px"></video>
-      <hr>
-      <h3>Témoignages<br><em id="em">Illustration de nos Formations</em></h3>
-
-
-    </div>
-
-    <div class="formation">
-      
-      <h1>FORMATIONS ?</h1>
-      <div class="web">
-        <div class="baner">
-          <p> Developpement WEB</p>
+  <!-- Contenu principal -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text slide-in-left">
+          <h1>Nos Formations</h1>
+          <p class="subtitle">Montez en compétence avec des programmes certifiants et pratiques.</p>
         </div>
-      <img src="../imgs/formation.jpg" width="100%" alt="">
-
+        <div class="hero-image slide-in-right">
+          <img src="../imgs/12.jpg" alt="Formations ORRYS" />
+        </div>
       </div>
+    </section>
 
-    <div class="network">
-      <div class="baner">
-        <p>Réseaux Informatiques</p>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Choisissez votre domaine</h2>
+
+        <!-- Filtres -->
+        <div class="filters">
+          <button class="active" data-category="all">Tous</button>
+          <button data-category="web">Web</button>
+          <button data-category="mobile">Mobile</button>
+          <button data-category="reseaux">Réseaux</button>
+          <button data-category="securite">Cybersécurité</button>
+        </div>
+
+        <!-- Grille des formations -->
+        <div class="formations-grid" id="formations">
+          <div class="formation-card fade-in" data-category="web">
+            <img src="../imgs/01.jpeg" alt="Formation Web" />
+            <span class="badge">Intermédiaire</span>
+            <h3>Développement Web Moderne</h3>
+            <p>HTML, CSS, JS, React, APIs REST. Créez des sites performants.</p>
+            <button>S'inscrire</button>
+          </div>
+
+          <div class="formation-card fade-in" data-category="mobile">
+            <img src="../imgs/03.jpeg" alt="Formation Mobile Flutter" />
+            <span class="badge">Avancé</span>
+            <h3>Applications Mobiles avec Flutter</h3>
+            <p>Apps Android/iOS performantes avec Flutter & Dart.</p>
+            <button>S'inscrire</button>
+          </div>
+
+          <div class="formation-card fade-in" data-category="reseaux">
+            <img src="../imgs/05.jpg" alt="Formation Réseaux" />
+            <span class="badge">Débutant</span>
+            <h3>Introduction aux Réseaux</h3>
+            <p>Base TCP/IP, routeurs, WiFi sécurisé, VLAN, Cisco.</p>
+            <button>S'inscrire</button>
+          </div>
+
+          <div class="formation-card fade-in" data-category="securite">
+            <img src="../imgs/06.jpg" alt="Formation Cybersécurité" />
+            <span class="badge">Avancé</span>
+            <h3>Cybersécurité Offensive & Défensive</h3>
+            <p>Pentest, forensic, audit, défense active.</p>
+            <button>S'inscrire</button>
+          </div>
+
+          <div class="formation-card fade-in" data-category="web">
+            <img src="../imgs/07.jpg" alt="Formation HTML CSS" />
+            <span class="badge">Débutant</span>
+            <h3>HTML & CSS de A à Z</h3>
+            <p>Les bases du web pour créer des sites modernes.</p>
+            <button>S'inscrire</button>
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <img src="../imgs/formation.jpg" width="100%" alt="">
-      
-    </div>
-
-  <div class="security">
-    <div class="baner">
-      <p> Cybersécurité</p>
-    </div>
-    
-      <img src="../imgs/formation.jpg" width="100%" alt="">
-    
-  </div>
-  <div class="security">
-    <div class="baner">
-      <p> Cybersécurité</p>
-    </div>
-    
-      <img src="../imgs/formation.jpg" width="100%" alt="">
-    
+  <!-- Social -->
+  <div class="social-media">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
   </div>
 
-  <!-- METTRE UN FORMULAIRE DANS CETTE RUBRIQUE POUR INSCRIPTIONS A NOS FORMATIONS AVEC NOMS PRENOMS TEL EMAIL ET DATE ET LIEU DE NAISSANCE -->
-  <!-- LES INSCRIPTIONS SE FONT EN LIGNES ET EN PRESENTIEL MAIS LINSCRIPTIONS EN LIGNE EST PLUS ENCOURAGER POUR DES REDUCTIONS -->
-
-
-  </div>
-
-
-  <footer>
-    ORRYS NUMERIC &copy 2025
-
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 ORRYS NUMERIC – Tous droits réservés</p>
+    </div>
   </footer>
 
-</body>
+  <!-- Script -->
+  <script>
+    const buttons = document.querySelectorAll(".filters button");
+    const cards = document.querySelectorAll(".formation-card");
 
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const category = btn.getAttribute("data-category");
+
+        cards.forEach(card => {
+          card.style.display = category === "all" || card.dataset.category === category
+            ? "block"
+            : "none";
+        });
+      });
+    });
+  </script>
+  <script src="../script.js"></script>
+</body>
 </html>

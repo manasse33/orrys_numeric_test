@@ -1,373 +1,59 @@
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    form input, form textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: var(--border-radius);
+      font-family: inherit;
+      font-size: 1rem;
     }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      color: #333;
+    form textarea {
+      resize: vertical;
     }
 
-    header {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    .form-group {
+      margin-bottom: 1.5rem;
     }
 
-    .headabout {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .navabout ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .navabout ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .navabout ul li a:hover,
-    .navabout ul li a.active {
-      background: linear-gradient(45deg, #667eea, #764ba2);
+    .submit-btn {
+      background: var(--gradient-blue);
       color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
     }
 
-    .apropos {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      animation: fadeInUp 0.8s ease-out;
+    .submit-btn:hover {
+      box-shadow: var(--shadow-hover);
+      transform: scale(1.02);
     }
 
-    .logo {
-      display: block;
-      margin: 0 auto 2rem;
-      max-width: 200px;
-      height: auto;
-      filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.02); }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    iframe {
+      width: 100%;
+      border-radius: var(--border-radius);
+      border: none;
+      height: 300px;
+      box-shadow: var(--shadow);
     }
 
     .contact-container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .iContact {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      animation: slideInLeft 0.8s ease-out;
-    }
-
-    @keyframes slideInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .baner {
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      color: white;
-      padding: 1rem;
-      border-radius: 15px;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    }
-
-    .baner p {
-      font-size: 1.2rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .contact-info {
-      margin-bottom: 2rem;
-    }
-
-    .contact-info p {
-      margin-bottom: 1rem;
-      padding: 0.8rem;
-      background: rgba(102, 126, 234, 0.1);
-      border-radius: 10px;
-      transition: all 0.3s ease;
-      border-left: 4px solid #667eea;
-    }
-
-    .contact-info p:hover {
-      background: rgba(102, 126, 234, 0.2);
-      transform: translateX(5px);
-    }
-
-    .contact-info i {
-      margin-right: 10px;
-      color: #667eea;
-      width: 20px;
-      text-align: center;
-    }
-
-    #whatsapp {
-      color: #25D366;
-    }
-
-    .social {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .social a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      color: white;
-      border-radius: 50%;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    }
-
-    .social a:hover {
-      transform: translateY(-3px) scale(1.1);
-      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-    }
-
-    .contactez {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      animation: slideInRight 0.8s ease-out;
-    }
-
-    @keyframes slideInRight {
-      from {
-        opacity: 0;
-        transform: translateX(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .map-section {
-      margin-bottom: 2rem;
-    }
-
-    .map-section iframe {
-      width: 100%;
-      height: 250px;
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1rem;
-    }
-
-    .address-info {
-      background: rgba(102, 126, 234, 0.1);
-      padding: 1rem;
-      border-radius: 10px;
-      border-left: 4px solid #667eea;
-    }
-
-    .contact h1 {
-      color: #333;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      font-size: 1.5rem;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .label {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .label label {
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: #333;
-    }
-
-    .input,
-    textarea {
-      padding: 0.8rem;
-      border: 2px solid rgba(102, 126, 234, 0.2);
-      border-radius: 10px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.9);
-    }
-
-    .input:focus,
-    textarea:focus {
-      outline: none;
-      border-color: #667eea;
-      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-      transform: translateY(-2px);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-      font-family: inherit;
-    }
-
-    .submit-btn {
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 25px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 100%;
-      margin-top: 1rem;
-      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    }
-
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-    }
-
-    .submit-btn:active {
-      transform: translateY(0);
-    }
-
-    footer {
-      background: rgba(51, 51, 51, 0.9);
-      color: white;
-      text-align: center;
-      padding: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       margin-top: 2rem;
-      border-radius: 20px 20px 0 0;
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .contact-container {
-        grid-template-columns: 1fr;
-      }
-
-      .navabout ul {
-        gap: 1rem;
-      }
-
-      .navabout ul li a {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .social a {
-        width: 45px;
-        height: 45px;
-      }
-
-      .iContact,
-      .contactez {
-        padding: 1.5rem;
-      }
-    }
-
-    /* Loading animation */
-    .loading {
-      opacity: 0.7;
-      pointer-events: none;
-    }
-
-    .loading .submit-btn {
-      background: linear-gradient(45deg, #ccc, #999);
-    }
-
-    /* Success message */
     .success-message {
-      background: rgba(34, 197, 94, 0.1);
-      color: #22c55e;
+      background: #d1e7dd;
+      color: #0f5132;
+      border: 1px solid #badbcc;
       padding: 1rem;
-      border-radius: 10px;
       margin-bottom: 1rem;
-      border-left: 4px solid #22c55e;
-      animation: slideInDown 0.5s ease-out;
+      border-radius: var(--border-radius);
+      display: none;
     }
-
-    @keyframes slideInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  
+ 
