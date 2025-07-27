@@ -3,7 +3,7 @@
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('loader').classList.add('fade-out');
-            }, 1500);
+            }, 500);
         });
 
         // Mobile Navigation
@@ -88,16 +88,16 @@
         // Header scroll effect
      
         // Parallax effect for hero section
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            const heroImage = document.querySelector('.hero-image');
+        // window.addEventListener('scroll', function() {
+        //     const scrolled = window.pageYOffset;
+        //     const hero = document.querySelector('.hero');
+        //     const heroImage = document.querySelector('.hero-image');
             
-            if (hero && heroImage) {
-                const rate = scrolled * -0.5;
-                heroImage.style.transform = `translateY(${rate}px)`;
-            }
-        });
+        //     if (hero && heroImage) {
+        //         const rate = scrolled * -0.5;
+        //         heroImage.style.transform = `translateY(${rate}px)`;
+        //     }
+        // });
 
         // Performance optimization: Debounce scroll events
         function debounce(func, wait) {
@@ -195,3 +195,48 @@
         script.text = JSON.stringify(structuredData);
         document.head.appendChild(script);
   
+    
+  const modal = document.getElementById("inscriptionModal");
+  const closeBtn = document.getElementById("closeModal");
+  const form = document.getElementById("preinscriptionForm");
+  const formationInput = document.getElementById("formationChoisie");
+  const confirmation = document.getElementById("confirmationMessage");
+
+  // Pour chaque bouton "Je m’inscris"
+  document.querySelectorAll(".formation-card button").forEach(button => {
+    button.addEventListener("click", () => {
+      const title = button.parentElement.querySelector("h3").textContent;
+      formationInput.value = title;
+      modal.style.display = "block";
+    });
+  });
+
+  // Fermer la modale
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    form.reset();
+    confirmation.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      form.reset();
+      confirmation.style.display = "none";
+    }
+  });
+
+  // Envoi du formulaire
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Simuler envoi ici (tu peux ajouter Formspree ou back-end réel plus tard)
+    confirmation.style.display = "block";
+
+    setTimeout(() => {
+      form.reset();
+      modal.style.display = "none";
+      confirmation.style.display = "none";
+    }, 2500);
+  });
+

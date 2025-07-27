@@ -151,7 +151,36 @@
           </div>
         </div>
       </div>
+
+      <!-- Modale de pré-inscription -->
+<div class="modal" id="inscriptionModal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h2>Pré-inscription à une formation</h2>
+    <form id="preinscriptionForm">
+      <div class="form-group">
+        <label for="nom">Nom & prénom :</label>
+        <input type="text" id="nom" name="nom" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Adresse email :</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="formation">Formation choisie :</label>
+        <input type="text" id="formationChoisie" name="formation" readonly />
+      </div>
+      <button type="submit" class="submit-btn">Envoyer</button>
+      <div id="confirmationMessage" style="display: none; margin-top: 1rem; color: green;">
+        ✅ Votre demande a bien été envoyée !
+      </div>
+    </form>
+  </div>
+</div>
+
     </section>
+
+
   </main>
 
   <!-- Social -->
