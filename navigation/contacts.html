@@ -3,21 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact – ORRYS NUMERIC</title>
+  <title>Contact - ORRYS NUMERIC</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../styles/contact.css">
   <link rel="icon" href="../imgs/favicon.png" type="image/png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com" defer></script> <!--le cdn pour le loader a point de rebondissement-->
+  <script src="../script.js" defer></script>
+  <script src="../scripts/contacts.js" defer></script>
+
 
 </head>
 <body>
      <!-- Loader -->
     <div class="loader" id="loader">
-        <div class="spinner"></div>
-        <div class="loader-text">ORRYS NUMERIC</div>
-    </div>
+            <div class="text-center">
+                <!-- Zone du logo -->
+                <div id="logoZone">
+                    <div id="logoPlaceholder" class="w-24 h-24 mx-auto"><img src="../imgs/logob.png" alt="" width="100px"></div>
+                </div>
 
+                <!-- Points rebondissants -->
+                <div class="flex items-center justify-center space-x-2" >
+                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
 
@@ -29,6 +45,7 @@
     </button>
 
     <!-- Sidebar Navigation -->
+   
      <aside class="sidebar" id="sidebar">
         <div class="sidebar-content">
             <div class="sidebar-logo">ORRYS NUMERIC</div>
@@ -36,52 +53,59 @@
             <div class="sidebar-service">
                 <i class="fas fa-code"></i>
                 <h5><a href="../index.html" class="active">ACCUEIL</a></h5>
-                <p>Solutions web modernes et performantes</p>
+                <!-- <p>Solutions web modernes et performantes</p> -->
             </div>
 
             <div class="sidebar-service">
                 <i class="fas fa-mobile-alt"></i>
                 <h5><a href="../navigation/about.html">À PROPOS</a></h5>
-                <p>Applications mobiles natives et cross-platform</p>
+                <!-- <p>Applications mobiles natives et cross-platform</p> -->
+            </div>
+
+            <div class="sidebar-service">
+                <i class="fas fa-mobile-alt"></i>
+                <h5><a href="../navigation/service.html">SERVICES</a></h5>
+                <!-- <p>Applications mobiles natives et cross-platform</p> -->
             </div>
 
             <div class="sidebar-service">
                 <i class="fas fa-network-wired"></i>
                 <h5><a href="../navigation/formations.html">FORMATIONS</a></h5>
-                <p>Infrastructure réseau et télécommunications</p>
+                <!-- <p>Infrastructure réseau et télécommunications</p> -->
             </div>
 
             <div class="sidebar-service">
                 <i class="fas fa-shield-alt"></i>
                 <h5><a href="../navigation/contacts.html">CONTACT</a></h5>
-                <p>Protection et sécurisation des systèmes</p>
+                <!-- <p>Protection et sécurisation des systèmes</p> -->
             </div>
 
-            <p style="margin-top: 2rem; text-align: center; opacity: 0.7;">© ORRYS NUMERIC 2025</p>
+            <!-- <p style="margin-top: 2rem; text-align: center; opacity: 0.7;">© ORRYS NUMERIC 2025</p> -->
         </div>
     </aside>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="header-content">
-      <a href="../index.html" class="logo">ORRYS NUMERIC</a>
-      <div class="contact-info">
-        <p><i class="fas fa-map-marker-alt"></i> CASE C4 23 OCH, BZV</p>
-        <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
-      </div>
+ <header class="header">
+  <div class="header-content full">
+    <div class="left">
+       <img src="../imgs/logob.png" alt="Logo ORRYS NUMERIC" class="logo">
     </div>
-  </header>
-
-  <!-- Nav -->
-  <nav class="main-nav">
-    <ul>
-       <li><a href="../index.html" class="active">ACCUEIL</a></li>
-            <li><a href="../navigation/about.html">À PROPOS</a></li>
-            <!-- <li><a href="#service">SERVICES</a></li> -->
-            <li><a href="../navigation/formations.html">FORMATIONS</a></li>
-            <li><a href="../navigation/contacts.html">CONTACT</a></li>
-    </ul>
-  </nav>
+    <div class="center">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">ACCUEIL</a></li>
+          <li><a href="../navigation/about.html">À PROPOS</a></li>
+          <li><a href="../navigation/service.html">SERVICES</a></li>
+          <li><a href="../navigation/formations.html">FORMATIONS</a></li>
+          <li><a href="../navigation/contacts.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="right contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> OCH, CASE C4-23. BZV</p>
+      <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
+    </div>
+  </div>
+</header>
 
   <!-- Section Contact -->
   <main>
@@ -101,12 +125,12 @@
             </div>
             <div class="hero-service-item">
               <h3>Adresse</h3>
-              <p><i class="fas fa-map-marker-alt"></i> OCH, Case C4 23, Brazzaville</p>
+              <p><i class="fas fa-map-marker-alt"></i> Av.Maréshal Lyautey, OCH, Case C4-23, Brazzaville</p>
             </div>
           </div>
         </div>
         <div class="hero-image slide-in-right">
-          <img src="../imgs/contact.jpg" alt="Contact ORRYS NUMERIC" />
+          <img src="../imgs/phonebook.jpg" alt="Contact ORRYS NUMERIC" />
         </div>
       </div>
     </section>
@@ -127,10 +151,17 @@
             </div>
 
             <div class="form-group">
+              <label for="tel">Telephone :</label>
+              <input type="tel" id="tel" name="tel" required placeholder="+24206757100" />
+            </div>
+
+
+            <div class="form-group">
               <label for="mail">Adresse email :</label>
               <input type="email" id="mail" name="email" required placeholder="exemple@orrysnumeric.cg" />
             </div>
 
+      
             <div class="form-group">
               <label for="message">Votre message :</label>
               <textarea id="message" name="message" rows="6" required placeholder="Votre message ici..."></textarea>
@@ -151,12 +182,13 @@
 
   <!-- Social media -->
   <div class="social-media">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://facebook.com/orrysnumeric" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/orrysnumeric" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://instagram.com/orrysnumeric" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/richel-oko-yoas-b9279319b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://wa.me/+242069215323" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -165,34 +197,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const form = this;
-      const button = form.querySelector('button');
-      const success = document.getElementById('successMessage');
-
-      button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
-      button.disabled = true;
-
-      setTimeout(() => {
-        success.style.display = 'block';
-        button.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer';
-        button.disabled = false;
-        form.reset();
-
-        Swal.fire({
-          title: 'Message envoyé !',
-          text: 'Nous reviendrons vers vous rapidement.',
-          icon: 'success',
-          confirmButtonColor: '#1E3A8A'
-        });
-      }, 2000);
-    });
-  </script>
-
-  <script src="../script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </body>
 </html>

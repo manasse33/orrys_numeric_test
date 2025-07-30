@@ -8,13 +8,33 @@
   <link rel="stylesheet" href="../styles/formation.css">
   <link rel="icon" href="../imgs/favicon.png" type="image/png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com" defer></script> <!--le cdn pour le loader a point de rebondissement-->
+  <script src="../script.js" defer></script>
+  <script src="../scripts/formations.js" defer ></script>
+
  
 </head>
 <body>
     <!-- Loader -->
-    <div class="loader" id="loader">
-        <div class="spinner"></div>
-        <div class="loader-text">ORRYS NUMERIC</div>
+   <div class="loader" id="loader">
+        <!-- <div class="spinner"></div> -->
+
+        <!-- <div class="loader-text"> -->
+            <div class="text-center">
+                <!-- Zone du logo -->
+                <div id="logoZone">
+                    <div id="logoPlaceholder" class="w-24 h-24 mx-auto"><img src="../imgs/logob.png" alt="" width="100px"></div>
+                </div>
+
+                <!-- Points rebondissants -->
+                <div class="flex items-center justify-center space-x-2" >
+                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <!-- Overlay -->
@@ -35,52 +55,59 @@
             <div class="sidebar-service">
                 <i class="fas fa-code"></i>
                 <h5><a href="../index.html" class="active">ACCUEIL</a></h5>
-                <p>Solutions web modernes et performantes</p>
+                <!-- <p>Solutions web modernes et performantes</p> -->
             </div>
 
             <div class="sidebar-service">
                 <i class="fas fa-mobile-alt"></i>
                 <h5><a href="../navigation/about.html">À PROPOS</a></h5>
-                <p>Applications mobiles natives et cross-platform</p>
+                <!-- <p>Applications mobiles natives et cross-platform</p> -->
+            </div>
+
+            <div class="sidebar-service">
+                <i class="fas fa-mobile-alt"></i>
+                <h5><a href="../navigation/service.html">SERVICES</a></h5>
+                <!-- <p>Applications mobiles natives et cross-platform</p> -->
             </div>
 
             <div class="sidebar-service">
                 <i class="fas fa-network-wired"></i>
                 <h5><a href="../navigation/formations.html">FORMATIONS</a></h5>
-                <p>Infrastructure réseau et télécommunications</p>
+                <!-- <p>Infrastructure réseau et télécommunications</p> -->
             </div>
 
             <div class="sidebar-service">
                 <i class="fas fa-shield-alt"></i>
                 <h5><a href="../navigation/contacts.html">CONTACT</a></h5>
-                <p>Protection et sécurisation des systèmes</p>
+                <!-- <p>Protection et sécurisation des systèmes</p> -->
             </div>
 
-            <p style="margin-top: 2rem; text-align: center; opacity: 0.7;">© ORRYS NUMERIC 2025</p>
+            <!-- <p style="margin-top: 2rem; text-align: center; opacity: 0.7;">© ORRYS NUMERIC 2025</p> -->
         </div>
     </aside>
-  <!-- Header -->
-  <header class="header">
-    <div class="header-content">
-      <a href="../index.html" class="logo">ORRYS NUMERIC</a>
-      <div class="contact-info">
-        <p><i class="fas fa-map-marker-alt"></i> CASE C4 23 OCH, BZV</p>
-        <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
-      </div>
+
+ <header class="header">
+  <div class="header-content full">
+    <div class="left">
+      <img src="../imgs/logob.png" alt="Logo ORRYS NUMERIC" class="logo">
     </div>
-  </header>
-
-  <!-- Nav -->
-  <nav class="main-nav">
-    <ul>
-      <li><a href="../index.html" class="active">ACCUEIL</a></li>
-            <li><a href="../navigation/about.html">À PROPOS</a></li>
-            <!-- <li><a href="#service">SERVICES</a></li> -->
-            <li><a href="../navigation/formations.html">FORMATIONS</a></li>
-            <li><a href="../navigation/contacts.html">CONTACT</a></li>
-    </ul>
-  </nav>
-
+    <div class="center">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">ACCUEIL</a></li>
+          <li><a href="../navigation/about.html">À PROPOS</a></li>
+          <li><a href="../navigation/service.html">SERVICES</a></li>
+          <li><a href="../navigation/formations.html">FORMATIONS</a></li>
+          <li><a href="../navigation/contacts.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="right contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> OCH, CASE C4-23. BZV</p>
+      <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
+    </div>
+  </div>
+</header>
   <!-- Contenu principal -->
   <main>
     <section class="hero">
@@ -106,20 +133,22 @@
           <button data-category="mobile">Mobile</button>
           <button data-category="reseaux">Réseaux</button>
           <button data-category="securite">Cybersécurité</button>
+           <button data-category="bureautique">Bureautique</button>
+            <button data-category="masterclass">MasterClass</button>
         </div>
 
         <!-- Grille des formations -->
         <div class="formations-grid" id="formations">
           <div class="formation-card fade-in" data-category="web">
-            <img src="../imgs/01.jpeg" alt="Formation Web" />
+            <img src="../imgs/03.jpeg" alt="Formation Web" />
             <span class="badge">Intermédiaire</span>
             <h3>Développement Web Moderne</h3>
-            <p>HTML, CSS, JS, React, APIs REST. Créez des sites performants.</p>
+            <p> Apprenez à Créer des sites performants avec HTML, CSS, JS, React, APIs REST.</p>
             <button>S'inscrire</button>
           </div>
 
           <div class="formation-card fade-in" data-category="mobile">
-            <img src="../imgs/03.jpeg" alt="Formation Mobile Flutter" />
+            <img src="../imgs/devMobile.jpg" alt="Formation Mobile Flutter" />
             <span class="badge">Avancé</span>
             <h3>Applications Mobiles avec Flutter</h3>
             <p>Apps Android/iOS performantes avec Flutter & Dart.</p>
@@ -127,10 +156,10 @@
           </div>
 
           <div class="formation-card fade-in" data-category="reseaux">
-            <img src="../imgs/05.jpg" alt="Formation Réseaux" />
+            <img src="../imgs/cisco.jpg" alt="Formation Réseaux" />
             <span class="badge">Débutant</span>
             <h3>Introduction aux Réseaux</h3>
-            <p>Base TCP/IP, routeurs, WiFi sécurisé, VLAN, Cisco.</p>
+            <p> Les fondamentaux de TCP/IP, routeurs, WiFi sécurisé, VLAN...</p>
             <button>S'inscrire</button>
           </div>
 
@@ -147,6 +176,37 @@
             <span class="badge">Débutant</span>
             <h3>HTML & CSS de A à Z</h3>
             <p>Les bases du web pour créer des sites modernes.</p>
+            <button>S'inscrire</button>
+          </div>
+          <div class="formation-card fade-in" data-category="bureautique">
+            <img src="../imgs/ordinateur.jpg" alt="Formation HTML CSS" />
+            <span class="badge">Débutant</span>
+            <h3>Bureautique</h3>
+            <p>Découvrez l'univers des suites offices modernes.</p>
+            <button>S'inscrire</button>
+          </div>
+          <div class="formation-card fade-in" data-category="masterclass">
+            <img src="../imgs/materClasse.webp" alt="Formation HTML CSS" />
+            <span class="badge">Débutant</span>
+            <h3>MasterClass</h3>
+            <p>Les aquis pour transformer une idée en business réel.</p>
+            <button>S'inscrire</button>
+          </div>
+
+          <div class="formation-card fade-in" data-category="web">
+            <img src="../imgs/cloud.webp" alt="Formation CLOUD" />
+            <span class="badge">Débutant</span>
+            <h3>Cloud Computing</h3>
+            <p>Les fondamentaux du cloud et services.</p>
+            <button>S'inscrire</button>
+          </div>
+
+          
+          <div class="formation-card fade-in" data-category="reseaux">
+            <img src="../imgs/maint.avif" alt="Formation HTML CSS" />
+            <span class="badge">Débutant</span>
+            <h3>Maintenance informatique</h3>
+            <p>La maintenances pour les nuls.</p>
             <button>S'inscrire</button>
           </div>
         </div>
@@ -185,12 +245,13 @@
 
   <!-- Social -->
   <div class="social-media">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://facebook.com/orrysnumeric" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/orrysnumeric" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://instagram.com/orrysnumeric" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/richel-oko-yoas-b9279319b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://wa.me/+242069215323" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -200,25 +261,5 @@
   </footer>
 
   <!-- Script -->
-  <script>
-    const buttons = document.querySelectorAll(".filters button");
-    const cards = document.querySelectorAll(".formation-card");
-
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        buttons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const category = btn.getAttribute("data-category");
-
-        cards.forEach(card => {
-          card.style.display = category === "all" || card.dataset.category === category
-            ? "block"
-            : "none";
-        });
-      });
-    });
-  </script>
-  <script src="../script.js"></script>
 </body>
 </html>

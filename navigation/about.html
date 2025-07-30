@@ -4,16 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>À propos - ORRYS NUMERIC</title>
+  l
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../styles/apropo.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com" defer></script> <!--le cdn pour le loader a point de rebondissement-->
+  <script src="../script.js" defer ></script>
+  
+
 </head>
 <body>
   <!-- Loader -->
-  <div class="loader" id="loader">
-    <div class="spinner"></div>
-    <div class="loader-text">ORRYS NUMERIC</div>
-  </div>
+    <div class="loader" id="loader">
+        <!-- <div class="spinner"></div> -->
+
+        <!-- <div class="loader-text"> -->
+            <div class="text-center">
+                <!-- Zone du logo -->
+                <div id="logoZone">
+                    <div id="logoPlaceholder" class="w-24 h-24 mx-auto"><img src="../imgs/logob.png" alt="" width="100px"></div>
+                </div>
+
+                <!-- Points rebondissants -->
+                <div class="flex items-center justify-center space-x-2" >
+                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
   <!-- Overlay -->
   <div class="overlay" id="overlay"></div>
@@ -33,52 +55,59 @@
             <div class="sidebar-service">
                 <i class="fas fa-code"></i>
                 <h5><a href="../index.html" class="active">ACCUEIL</a></h5>
-                <p>Solutions web modernes et performantes</p>
+                <!-- <p>Solutions web modernes et performantes</p> -->
             </div>
 
             <div class="sidebar-service">
                 <i class="fas fa-mobile-alt"></i>
                 <h5><a href="../navigation/about.html">À PROPOS</a></h5>
-                <p>Applications mobiles natives et cross-platform</p>
+                <!-- <p>Applications mobiles natives et cross-platform</p> -->
+            </div>
+
+            <div class="sidebar-service">
+                <i class="fas fa-mobile-alt"></i>
+                <h5><a href="../navigation/service.html">SERVICES</a></h5>
+                <!-- <p>Applications mobiles natives et cross-platform</p> -->
             </div>
 
             <div class="sidebar-service">
                 <i class="fas fa-network-wired"></i>
                 <h5><a href="../navigation/formations.html">FORMATIONS</a></h5>
-                <p>Infrastructure réseau et télécommunications</p>
+                <!-- <p>Infrastructure réseau et télécommunications</p> -->
             </div>
 
             <div class="sidebar-service">
                 <i class="fas fa-shield-alt"></i>
                 <h5><a href="../navigation/contacts.html">CONTACT</a></h5>
-                <p>Protection et sécurisation des systèmes</p>
+                <!-- <p>Protection et sécurisation des systèmes</p> -->
             </div>
 
-            <p style="margin-top: 2rem; text-align: center; opacity: 0.7;">© ORRYS NUMERIC 2025</p>
+            <!-- <p style="margin-top: 2rem; text-align: center; opacity: 0.7;">© ORRYS NUMERIC 2025</p> -->
         </div>
     </aside>
 
-  <!-- Header -->
   <header class="header">
-    <div class="header-content">
-      <a href="index.html" class="logo">ORRYS NUMERIC</a>
-      <div class="contact-info">
-        <p><i class="fas fa-map-marker-alt"></i> CASE C4 23 OCH, BZV</p>
-        <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
-      </div>
+  <div class="header-content full">
+    <div class="left">
+      <img src="../imgs/logob.png" alt="Logo ORRYS NUMERIC" class="logo">
     </div>
-  </header>
-
-  <!-- Navigation -->
-  <nav class="main-nav">
-    <ul>
-         <li><a href="../index.html" class="active">ACCUEIL</a></li>
-            <li><a href="../navigation/about.html">À PROPOS</a></li>
-            <!-- <li><a href="#service">SERVICES</a></li> -->
-            <li><a href="../navigation/formations.html">FORMATIONS</a></li>
-            <li><a href="../navigation/contacts.html">CONTACT</a></li>
-    </ul>
-  </nav>
+    <div class="center">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">ACCUEIL</a></li>
+          <li><a href="../navigation/about.html">À PROPOS</a></li>
+          <li><a href="../navigation/service.html">SERVICES</a></li>
+          <li><a href="../navigation/formations.html">FORMATIONS</a></li>
+          <li><a href="../navigation/contacts.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="right contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> OCH, CASE C4-23. BZV</p>
+      <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
+    </div>
+  </div>
+</header>
 
   <!-- Main content -->
   <main>
@@ -86,16 +115,19 @@
       <div class="hero-content">
         <div class="hero-text slide-in-left">
           <h1>À propos de ORRYS NUMERIC</h1>
-          <p class="subtitle">Excellence Technologique & Conseil IT</p>
+          
+          
+
           <div class="hero-services">
             <div class="hero-service-item">
               <h3>Notre Mission</h3>
-              <p>Accompagner la transformation digitale des entreprises grâce à notre expertise en IT, développement et cybersécurité.</p>
+              <p>Faire du numerique notre premier levier et excéller en accompagnant nos clients vers une transition numerique totale, en developpant des solutions technologiques innovantes et accessibles.</p>
             </div>
             <div class="hero-service-item">
               <h3>Nos Valeurs</h3>
-              <p>Innovation, Excellence, Proximité, Sécurité, et Transparence dans tous nos services et projets.</p>
+              <p>Transformer par l'Innovation, Exceller pour rendre accessibles, Sécuriser pour la confiance.</p>
             </div>
+            
           </div>
         </div>
         <div class="hero-image slide-in-right">
@@ -107,21 +139,45 @@
     <section class="section">
       <div class="container">
         <h2 class="section-title fade-in">QUI SOMMES-NOUS ?</h2>
+<div class="about-powerful">
+  <div class="about-container">
+    <div class="about-header">
+      <h2><span>ORRYS NUMERIC</span>, bâtisseur du numérique congolais</h2>
+      <div class="about-bar"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-block">
+        <p><i class="fas fa-rocket"></i> Nous développons des solutions web et applications innovantes avec un engagement fort envers l’<span class="highlight">innovation technologique</span>.</p>
+        <p><i class="fas fa-network-wired"></i> De l’<span class="highlight">identité numérique</span> à la <span class="highlight">cybersécurité</span>, en passant par la <span class="highlight">connectivité réseau</span>, nous accompagnons la transformation digitale.</p>
+        <p><i class="fas fa-chalkboard-teacher"></i> À travers nos <span class="highlight">formations inclusives</span>, nous réduisons la fracture numérique et préparons l’avenir.</p>
+      </div>
+
+      <div class="about-vision">
+        <blockquote>
+          “Notre ambition : propulser le Congo dans l’ère digitale avec des technologies audacieuses, inclusives et sur mesure.”
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+
         <div class="services-grid">
           <article class="service-card fade-in">
             <i class="fas fa-users"></i>
             <h3>Une Équipe Pluridisciplinaire</h3>
-            <p>Développeurs, consultants, formateurs, spécialistes réseaux & cybersécurité unis pour vos projets numériques.</p>
+            <p>Composée des Développeurs, des consultants, des formateurs, des spécialistes réseaux & en cybersécurité unis pour vous offrirs des produits à votre images.</p>
           </article>
           <article class="service-card fade-in">
             <i class="fas fa-lightbulb"></i>
             <h3>Notre Vision</h3>
-            <p>Devenir le leader technologique en Afrique centrale à travers des solutions digitales de qualité et accessibles.</p>
+            <p>Etre un leader technologique qui Offre des services et produits digitaux à tous, accés sur une transformations digitale complète et inclusive. </p>
           </article>
           <article class="service-card fade-in">
             <i class="fas fa-handshake"></i>
             <h3>Notre Engagement</h3>
-            <p>Vous accompagner de manière humaine, professionnelle et proactive dans tous vos défis technologiques.</p>
+            <p> Etre constant dans notre mission et Accompagner de manière humaine, professionnelle et proactive tous nos clients dans leurs défis technologiques.</p>
           </article>
         </div>
       </div>
@@ -131,10 +187,10 @@
   <!-- Réseaux sociaux -->
   <div class="social-media">
     <a href="https://facebook.com/orrysnumeric" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/orrysnumeric" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://twitter.com/orrysnumeric" target="_blank"><i class="fab fa-x-twitter"></i></a>
     <a href="https://instagram.com/orrysnumeric" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://linkedin.com/company/orrysnumeric" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://wa.me/242066318333" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.linkedin.com/in/richel-oko-yoas-b9279319b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://wa.me/+242069215323" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
 
   <!-- Footer -->
@@ -144,6 +200,5 @@
     </div>
   </footer>
 
-  <script src="../script.js"></script>
 </body>
 </html>

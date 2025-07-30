@@ -6,6 +6,21 @@
             }, 500);
         });
 
+       
+
+  const links = document.querySelectorAll('.main-nav a');
+  const currentPage = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    if (link.getAttribute('href').includes(currentPage)) {
+      link.classList.add('active');
+    }
+  });
+
+
+
+
+
         // Mobile Navigation
         const navToggle = document.getElementById('navToggle');
         const sidebar = document.getElementById('sidebar');
@@ -175,7 +190,7 @@
             "logo": "https://www.orrysnumeric.com/logo.png",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "CASE C4 23 OCH",
+                "streetAddress": "OCH, CASE C4-23",
                 "addressLocality": "Brazzaville",
                 "addressCountry": "CG"
             },
@@ -196,47 +211,4 @@
         document.head.appendChild(script);
   
     
-  const modal = document.getElementById("inscriptionModal");
-  const closeBtn = document.getElementById("closeModal");
-  const form = document.getElementById("preinscriptionForm");
-  const formationInput = document.getElementById("formationChoisie");
-  const confirmation = document.getElementById("confirmationMessage");
-
-  // Pour chaque bouton "Je m’inscris"
-  document.querySelectorAll(".formation-card button").forEach(button => {
-    button.addEventListener("click", () => {
-      const title = button.parentElement.querySelector("h3").textContent;
-      formationInput.value = title;
-      modal.style.display = "block";
-    });
-  });
-
-  // Fermer la modale
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-    form.reset();
-    confirmation.style.display = "none";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-      form.reset();
-      confirmation.style.display = "none";
-    }
-  });
-
-  // Envoi du formulaire
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    // Simuler envoi ici (tu peux ajouter Formspree ou back-end réel plus tard)
-    confirmation.style.display = "block";
-
-    setTimeout(() => {
-      form.reset();
-      modal.style.display = "none";
-      confirmation.style.display = "none";
-    }, 2500);
-  });
-
+ 
