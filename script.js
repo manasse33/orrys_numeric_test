@@ -103,16 +103,16 @@
         // Header scroll effect
      
         // Parallax effect for hero section
-        // window.addEventListener('scroll', function() {
-        //     const scrolled = window.pageYOffset;
-        //     const hero = document.querySelector('.hero');
-        //     const heroImage = document.querySelector('.hero-image');
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const heroImage = document.querySelector('.hero-image');
             
-        //     if (hero && heroImage) {
-        //         const rate = scrolled * -0.5;
-        //         heroImage.style.transform = `translateY(${rate}px)`;
-        //     }
-        // });
+            if (hero && heroImage) {
+                const rate = scrolled * -0.5;
+                heroImage.style.transform = `translateY(${rate}px)`;
+            }
+        });
 
         // Performance optimization: Debounce scroll events
         function debounce(func, wait) {
