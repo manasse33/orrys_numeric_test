@@ -20,10 +20,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 html {
     scroll-behavior: smooth;
+    
+    
 }
 
 body {
@@ -32,6 +35,7 @@ body {
     color: var(--text-dark);
     background: var(--white);
     overflow-x: hidden;
+    
 }
 
 /* Loader */
