@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formations – ORRYS NUMERIC</title>
+  <title>Formations - ORRYS NUMERIC</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../styles/formation.css">
   <link rel="icon" href="../imgs/favicon.png" type="image/png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com" defer></script> <!--le cdn pour le loader a point de rebondissement-->
   <script src="../script.js" defer></script>
-  <script src="../scripts/formations.js" defer ></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="../scripts/formations.js" defer></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  
 
  
 </head>
@@ -51,64 +52,53 @@
     <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-content">
-            <div class="sidebar-logo">ORRYS NUMERIC</div>
-            
+            <div class="sidebar-logo"><img src="../imgs/logob.png" width="50%" alt=""></div>
+
             <div class="sidebar-service">
-                <i class="fas fa-code"></i>
-                <h5><a href="../index.html" class="active">ACCUEIL</a></h5>
-                <!-- <p>Solutions web modernes et performantes</p> -->
+                 
+                <a href="../index.html"><i class="fas fa-home"></i> ACCUEIL</a>
             </div>
 
             <div class="sidebar-service">
-                <i class="fas fa-mobile-alt"></i>
-                <h5><a href="../navigation/about.html">À PROPOS</a></h5>
-                <!-- <p>Applications mobiles natives et cross-platform</p> -->
+                <a href="../navigation/about.html"><i class="fas fa-user"></i> À PROPOS</a>
             </div>
 
             <div class="sidebar-service">
-                <i class="fas fa-mobile-alt"></i>
-                <h5><a href="../navigation/service.html">SERVICES</a></h5>
-                <!-- <p>Applications mobiles natives et cross-platform</p> -->
-            </div>
+                <a href="../navigation/formations.html" class="actived"><i class="fas fa-graduation-cap"></i> FORMATION</a>
+             </div>
 
             <div class="sidebar-service">
-                <i class="fas fa-network-wired"></i>
-                <h5><a href="../navigation/formations.html">FORMATIONS</a></h5>
-                <!-- <p>Infrastructure réseau et télécommunications</p> -->
+                <a href="../navigation/contacts.html"><i class="fas fa-envelope"></i> CONTACT</a>
             </div>
 
-            <div class="sidebar-service">
-                <i class="fas fa-shield-alt"></i>
-                <h5><a href="../navigation/contacts.html">CONTACT</a></h5>
-                <!-- <p>Protection et sécurisation des systèmes</p> -->
-            </div>
-
-            <!-- <p style="margin-top: 2rem; text-align: center; opacity: 0.7;">© ORRYS NUMERIC 2025</p> -->
+            <p style="margin-top: 2rem; text-align: center; opacity: 0.7;">&copy; ORRYS NUMERIC 2025</p>
         </div>
     </aside>
+  <!-- Header -->
+  <header class="header">
+        <img src="../imgs/logob.png" alt="logo Onumeric" class="logo">
+        <img src="../imgs/logo.png" alt="logo Onumeric" class="logo-mobile">
 
- <header class="header">
-  <div class="header-content full">
-    <div class="left">
-      <img src="../imgs/" alt="Logo ORRYS NUMERIC" class="logo">
-    </div>
-    <div class="center">
-      <nav class="main-nav">
-        <ul>
-          <li><a href="../index.html">ACCUEIL</a></li>
-          <li><a href="../navigation/about.html">À PROPOS</a></li>
-          <li><a href="../navigation/service.html">SERVICES</a></li>
-          <li><a href="../navigation/formations.html">FORMATIONS</a></li>
-          <li><a href="../navigation/contacts.html">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="right contact-info">
-      <p><i class="fas fa-map-marker-alt"></i> OCH, CASE C4-23. BZV</p>
-      <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
-    </div>
-  </div>
-</header>
+        <div class="header-content">
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> OCH, CASE C4-23. BZV</p>
+                <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
+            </div>
+        </div>
+    </header>
+
+
+  <!-- Nav -->
+    <nav class="main-nav">
+    <ul>
+      <li><a href="../index.html">ACCUEIL</a></li>
+            <li><a href="about.html">À PROPOS</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="formations.html" class="actived">FORMATIONS</a></li>
+            <li><a href="contacts.html">CONTACT</a></li>
+    </ul>
+  </nav>
+
   <!-- Contenu principal -->
   <main>
     <section class="hero">
@@ -129,7 +119,7 @@
 
         <!-- Filtres -->
         <div class="filters">
-          <button class="active" data-category="all">Tous</button>
+          <button class="actived" data-category="all">Tous</button>
           <button data-category="web">Web</button>
           <button data-category="mobile">Mobile</button>
           <button data-category="reseaux">Réseaux</button>
@@ -218,28 +208,30 @@
   <div class="modal-content">
     <span class="close-btn" id="closeModal">&times;</span>
     <h2>Pré-inscription à une formation</h2>
-    <form id="preinscriptionForm">
+    <form id="preinscriptionForm" action="/formations" method="POST">
       <div class="form-group">
         <label for="nom">Nom & prénom :</label>
-        <input type="text" id="nom" name="nom" required />
+        <input type="text" id="nom" name="name" required />
       </div>
 
        <div class="form-group">
         <label for="tel">Telephone :</label>
         <input type="tel" id="tel" name="tel" required />
       </div>
+
       <div class="form-group">
         <label for="email">Adresse email :</label>
         <input type="email" id="email" name="email" required />
       </div>
+
       <div class="form-group">
         <label for="formation">Formation choisie :</label>
         <input type="text" id="formationChoisie" name="formation" readonly />
       </div>
       <button type="submit" class="submit-btn">Envoyer</button>
-      <div id="confirmationMessage" style="display: none; margin-top: 1rem; color: green;">
-        ✅ Votre demande a bien été envoyée !
-      </div>
+    <div id="successMessage" class="success-message">
+              <i class="fas fa-check-circle"></i> Votre message a bien été envoyé !
+            </div>
     </form>
   </div>
 </div>
@@ -251,9 +243,9 @@
 
   <!-- Social -->
   <div class="social-media">
-    <a href="https://facebook.com/orrysnumeric" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/orrysnumeric" target="_blank"><i class="fab fa-x-twitter"></i></a>
-    <a href="https://instagram.com/orrysnumeric" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://www.linkedin.com/in/richel-oko-yoas-b9279319b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     <a href="https://wa.me/+242069215323" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
@@ -262,10 +254,11 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 ORRYS NUMERIC – Tous droits réservés</p>
+      <p>&copy; 2025 ORRYS NUMERIC - Tous droits réservés</p>
     </div>
   </footer>
 
   <!-- Script -->
+    
 </body>
 </html>

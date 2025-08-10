@@ -18,7 +18,7 @@
       transition: var(--transition);
     }
 
-    .filters button.active,
+    .filters button.actived,
     .filters button:hover {
       background: var(--primary-blue);
       color: white;
@@ -29,7 +29,8 @@
       flex-direction: column;
       background: var(--white);
       padding: 1rem;
-      border-radius: var(--border-radius);
+      /* border-radius: var(--border-radius); */
+      border-radius: 0px 20px 15px 25px;
       box-shadow: var(--shadow);
       overflow: hidden;
       transition: var(--transition);
@@ -119,3 +120,13 @@
   border-radius: var(--border-radius);
   font-family: inherit;
 }
+  .success-message {
+      background: #d1e7dd;
+      color: #0f5132;
+      border: 1px solid #badbcc;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: var(--border-radius);
+      display: none;
+    }
+ 

@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ORRYS NUMERIC - Cabinet conseil en IT, développement web, applications mobiles, réseaux télécoms et cybersécurité à Brazzaville, Congo">
-    <meta name="keywords" content="développement web, applications mobiles, cybersécurité, réseaux télécoms, formations IT, conseil informatique, Brazzaville, Congo">
+    <meta name="description"
+        content="ORRYS NUMERIC - Cabinet conseil en IT, développement web, applications mobiles, réseaux télécoms et cybersécurité à Brazzaville, Congo">
+    <meta name="keywords"
+        content="développement web, applications mobiles, cybersécurité, réseaux télécoms, formations IT, conseil informatique, Brazzaville, Congo">
     <meta name="author" content="ORRYS NUMERIC">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="ORRYS NUMERIC - Excellence Technologique">
-    <meta property="og:description" content="Cabinet conseil en IT spécialisé dans le développement web, mobile, cybersécurité et formations">
+    <meta property="og:description"
+        content="Cabinet conseil en IT spécialisé dans le développement web, mobile, cybersécurité et formations">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.orrysnumeric.cg">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ORRYS NUMERIC - Excellence Technologique">
-    <meta name="twitter:description" content="Cabinet conseil en IT spécialisé dans le développement web, mobile, cybersécurité et formations">
-    
+    <meta name="twitter:description"
+        content="Cabinet conseil en IT spécialisé dans le développement web, mobile, cybersécurité et formations">
+
     <title>ORRYS NUMERIC - Excellence Technologique | Cabinet Conseil IT Brazzaville</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/formation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com" defer></script> <!--le cdn pour le loader a point de rebondissement-->
     <script src="script.js" defer></script>
     <script src="scripts/index.js" defer></script>
 
-    
-   
+
+
 </head>
+
 <body>
- <div class="loader" id="loader">
-            <div class="text-center">
-                <!-- Zone du logo -->
-                <div id="logoZone">
-                    <div id="logoPlaceholder" class="w-24 h-24 mx-auto"><img src="/imgs/logob.png" alt="" width="100px"></div>
-                </div>
-                <!-- Points rebondissants * avec des classes tailwindcss -->
-                <div class="flex items-center justify-center space-x-2" >
-                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
-                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
-                    <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+    <div class="loader" id="loader">
+        <div class="text-center">
+            <!-- Zone du logo -->
+            <div id="logoZone">
+                <div id="logoPlaceholder" class="w-24 h-24 mx-auto"><img src="imgs/logob.png" alt="" width="100px">
                 </div>
             </div>
-
+            <!-- Points rebondissants * avec des classes tailwindcss -->
+            <div class="flex items-center justify-center space-x-2">
+                <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+                <div class="w-3 h-3 bg-white rounded-full bounce-dot"></div>
+            </div>
         </div>
+
+    </div>
     </div>
 
     <!-- Overlay * qui permet de mettre un background lors du loader de la page* -->
@@ -64,68 +73,52 @@
     <!-- Sidebar Navigation * la menu de coté qui est caché-->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-content">
-            <div class="sidebar-logo">ORRYS NUMERIC</div>
-            
+            <div class="sidebar-logo"><img src="imgs/logob.png" width="50%" alt=""></div>
+
             <div class="sidebar-service">
-                <i class="fas fa-code"></i>
-                <h5><a href="index.html" class="active">ACCUEIL</a></h5>
-                <!-- <p>Solutions web modernes et performantes</p> -->
+                 
+                <a href="index.html" class="actived"><i class="fas fa-home"></i> ACCUEIL</a>
             </div>
 
             <div class="sidebar-service">
-                <i class="fas fa-mobile-alt"></i>
-                <h5><a href="navigation/about.html">À PROPOS</a></h5>
-                <!-- <p>Applications mobiles natives et cross-platform</p> -->
+                <a href="navigation/about.html"><i class="fas fa-user"></i> À PROPOS</a>
             </div>
 
             <div class="sidebar-service">
-                <i class="fas fa-shield-alt"></i>
-                <h5><a href="navigation/service.html">SERVICES</a></h5>
-                <!-- <p>Protection et sécurisation des systèmes</p> -->
-            </div>
+                <a href="navigation/formations.html"><i class="fas fa-graduation-cap"></i> FORMATION</a>
+             </div>
 
             <div class="sidebar-service">
-                <i class="fas fa-network-wired"></i>
-                <h5><a href="navigation/formations.html">FORMATION</a></h5>
-                <!-- <p>Infrastructure réseau et télécommunications</p> -->
-            </div>
-
-            <div class="sidebar-service">
-                <i class="fas fa-shield-alt"></i>
-                <h5><a href="navigation/contacts.html">CONTACT</a></h5>
-                <!-- <p>Protection et sécurisation des systèmes</p> -->
+                <a href="navigation/contacts.html"><i class="fas fa-envelope"></i> CONTACT</a>
             </div>
 
             <p style="margin-top: 2rem; text-align: center; opacity: 0.7;">&copy; ORRYS NUMERIC 2025</p>
         </div>
     </aside>
 
-<header class="header">
-  <div class="header-content full">
-    <div class="left">
-      <img src="imgs/" alt="Logo ORRYS NUMERIC" class="logo">
-    </div>
-    <div class="center">
-      <nav class="main-nav">
+    <!-- Header -->
+    <header class="header">
+        <img src="imgs/logob.png" alt="logo Onumeric" class="logo">
+        <img src="imgs/logo.png" alt="logo Onumeric" class="logo-mobile">
+
+        <div class="header-content">
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> OCH, CASE C4-23. BZV</p>
+                <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
         <ul>
-          <li><a href="index.html">ACCUEIL</a></li>
-          <li><a href="navigation/about.html">À PROPOS</a></li>
-          <li><a href="navigation/service.html">SERVICES</a></li>
-          <li><a href="navigation/formations.html">FORMATIONS</a></li>
-          <li><a href="navigation/contacts.html">CONTACT</a></li>
+            <li><a href="index.html" class="actived">ACCUEIL</a></li>
+            <li><a href="navigation/about.html">À PROPOS</a></li>
+            <li><a href="navigation/services.html">SERVICES</a></li>
+            <li><a href="navigation/formations.html">FORMATIONS</a></li>
+            <li><a href="navigation/contacts.html">CONTACT</a></li>
         </ul>
-      </nav>
-    </div>
-    <div class="right contact-info">
-      <p><i class="fas fa-map-marker-alt"></i> OCH, CASE C4-23. BZV</p>
-      <p><i class="fas fa-phone"></i> +242 06-631-83-33</p>
-    </div>
-  </div>
-</header>
-
-
-<!-- Main Navigation -->
-
+    </nav>
 
     <!-- Main Content -->
     <main>
@@ -138,20 +131,22 @@
                     <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView()">
                         COMMENCER
                     </button>
-                    
+
                     <div class="hero-services">
                         <div class="hero-service-item">
-                            <h3>Votre Cabinet Conseil</h3>
-                            <p>Nous offrons nos services et nous vous accompagnons dans vos processus de digitalisation avec expertise et innovation.</p>
+                            <h3>Votre Cabinet de Conseil</h3>
+                            <p>Nous vous offrons des services et vous accompagnons dans vos processus de digitalisation
+                                avec expertise.</p>
                         </div>
-                        
+
                         <div class="hero-service-item">
                             <h3>La solution digitale</h3>
-                            <p>Notre entreprise vous assure une transformation numerique complète adaptée à l'ère du digital.</p>
+                            <p>Notre entreprise vous assure une transformation numerique complète adaptée à l'ère du
+                                digital.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="hero-image slide-in-right">
                     <img src="imgs/01.jpeg" alt="Excellence technologique ORRYS NUMERIC">
                 </div>
@@ -163,76 +158,60 @@
             <div class="container">
                 <h2 class="section-title fade-in">NOS SERVICES</h2>
                 <div class="services-grid">
-                 <article class="service-card fade-in">
-                    <i class="fas fa-code"></i>
-                    <h3>Développement Web</h3>
-                    <div class="divider"></div>
+                    <article class="service-card fade-in">
+                        <i class="fas fa-code"></i>
+                        <h3>Développement Web</h3>
+                        <p><i class="fas fa-check-circle" ></i>Conception des sites web modernes (vitrine, e-commerce, éducatifs), performants et
+                            parfaitement adaptés à tous les supports.</p>
+                        <p><i class="fas fa-check-circle" ></i>Implémentation des dernières technologies web pour une expérience
+                            utilisateur exceptionnelle.</p>
+                    </article>
 
-                    <ul class="service-description">
-                        <li><i class="fas fa-check-circle"></i> Création de sites vitrines, e-commerce & plateformes dynamiques</li>
-                        <li><i class="fas fa-check-circle"></i> Design responsive et performance optimisée</li>
-                        <li><i class="fas fa-check-circle"></i> Expérience utilisateur intuitive et moderne</li>
-                        <li><i class="fas fa-check-circle"></i> Utilisation des technologies récentes (HTML5, CSS3, JS, React)</li>
-                    </ul>
-                </article>
-
-                    
                     <article class="service-card fade-in">
                         <i class="fas fa-mobile-alt"></i>
                         <h3>Applications Mobiles</h3>
-                        <div class="divider"></div>
-
-                    <ul class="service-description">
-                        <li><i class="fas fa-check-circle"></i> Création de sites vitrines, e-commerce & plateformes dynamiques</li>
-                        <li><i class="fas fa-check-circle"></i> Design responsive et performance optimisée</li>
-                        <li><i class="fas fa-check-circle"></i> Expérience utilisateur intuitive et moderne</li>
-                        <li><i class="fas fa-check-circle"></i> Utilisation des technologies récentes (HTML5, CSS3, JS, React)</li>
-                    </ul>
+                        <p><i class="fas fa-check-circle" ></i>Développement des applications intuitives et performantes pour iOS et Android de types natifs
+                            et cross-platform optimisées pour une meilleure expérience utilisateur et intégrées aux
+                            dernières technologies mobiles.</p>
                     </article>
-                    
+
                     <article class="service-card fade-in">
                         <i class="fas fa-network-wired"></i>
                         <h3>Réseaux & Télécoms</h3>
-                      <div class="divider"></div>
-
-                    <ul class="service-description">
-                        <li><i class="fas fa-check-circle"></i> Création de sites vitrines, e-commerce & plateformes dynamiques</li>
-                        <li><i class="fas fa-check-circle"></i> Design responsive et performance optimisée</li>
-                        <li><i class="fas fa-check-circle"></i> Expérience utilisateur intuitive et moderne</li>
-                        <li><i class="fas fa-check-circle"></i> Utilisation des technologies récentes (HTML5, CSS3, JS, React)</li>
-                    </ul>
+                        <p><i class="fas fa-check-circle"></i>Mise
+                            en place des systemes informatiques pour tous.
+                            <br>
+                            <i class="fas fa-check-circle" ></i>Installation
+                            des hotspots et bien plus pour la connectivité wiffi.
+                            <br><i class="fas fa-check-circle" ></i>Nous
+                            assurons la fiabilité des systèmes réseaux avec des solutions optimisées.
+                        </p>
                     </article>
-                    
+
                     <article class="service-card fade-in">
                         <i class="fas fa-shield-alt"></i>
                         <h3>Cybersécurité</h3>
-                      <div class="divider"></div>
-
-                    <ul class="service-description">
-                        <li><i class="fas fa-check-circle"></i> Création de sites vitrines, e-commerce & plateformes dynamiques</li>
-                        <li><i class="fas fa-check-circle"></i> Design responsive et performance optimisée</li>
-                        <li><i class="fas fa-check-circle"></i> Expérience utilisateur intuitive et moderne</li>
-                        <li><i class="fas fa-check-circle"></i> Utilisation des technologies récentes (HTML5, CSS3, JS, React)</li>
-                    </ul>
+                        <p><i class="fas fa-check-circle" ></i> La
+                            Protection complète de vos systèmes d'information contre les cybermenaces. Audit de
+                            sécurité, mise en place de solutions de protection avancées et formation de vos équipes pour
+                            une sécurité optimale.</p>
                     </article>
 
                     <article class="service-card fade-in">
-                       <i class="fas fa-wrench"></i>
+                        <i class="fas fa-wrench"></i>
                         <h3>Assistance Informatique & Maintenance IT</h3>
-                       <div class="divider"></div>
-
-                    <ul class="service-description">
-                        <li><i class="fas fa-check-circle"></i> Création de sites vitrines, e-commerce & plateformes dynamiques</li>
-                        <li><i class="fas fa-check-circle"></i> Design responsive et performance optimisée</li>
-                        <li><i class="fas fa-check-circle"></i> Expérience utilisateur intuitive et moderne</li>
-                        <li><i class="fas fa-check-circle"></i> Utilisation des technologies récentes (HTML5, CSS3, JS, React)</li>
-                    </ul>
+                        <p> <i class="fas fa-check-circle" ></i> Vous pouvez
+                            nous consulter Pour vos soucis au quotidien avec vos Ordinateurs et votre réseaux
+                            d'entreprise aussi bien avec d'autres outils numériques</p>
                     </article>
 
                     <article class="service-card fade-in">
                         <i class="fas fa-desktop"></i>
-                        <h3></h3>
-                        <p></p>
+                        <h3>Video surveillance & Autres</h3>
+                        <p><i class="fas fa-check-circle" ></i>
+                            installations des cameras de surveillance pour les particuliers et entreprise. <br><i
+                                class="fas fa-check-circle" ></i>Bien d'autres services digitaux pour vous servire?</p>
+
                     </article>
 
                 </div>
@@ -246,118 +225,149 @@
                 <div class="formations-grid">
                     <article class="formation-card bas fade-in">
                         <h3>Technologies Web Modernes</h3>
-                         <img src="imgs/techAvance.jfif" alt="Formation HTML CSS" />
-                         <p style="display: none;">Formation complète aux technologies web de pointe : HTML5, CSS3, JavaScript ES6+, React, Vue.js, Node.js. Apprenez à créer des applications web performantes et évolutives avec les meilleures pratiques du développement moderne et les dernières tendances.</p>
-                         <button class="btn-detail">Details</button>
+                        <img src="imgs/techAvance.jfif" alt="Formation HTML CSS" />
+                        <p style="display: none;">Formation complète aux technologies web de pointe : HTML5, CSS3,
+                            JavaScript ES6+, React, Vue.js, Node.js. Apprenez à créer des applications web performantes
+                            et évolutives avec les meilleures pratiques du développement moderne et les dernières
+                            tendances.</p>
+                        <button class="btn-detail">Details</button>
                     </article>
-                    
+
                     <article class="formation-card bas fade-in">
                         <h3>Développement Mobile</h3>
-                          <img src="imgs/appMobile.jpg" alt="Formation HTML CSS" />
-                           <p style="display: none;">Maîtrisez le développement d'applications mobiles avec React Native, Flutter, ou le développement natif iOS/Android. Formation pratique avec des projets concrets et une approche hands-on pour créer des apps performantes.</p>
-                          <button class="btn-detail">Details</button>
+                        <img src="imgs/appMobile.jpg" alt="Formation HTML CSS" />
+                        <p style="display: none;">Maîtrisez le développement d'applications mobiles avec React Native,
+                            Flutter, ou le développement natif iOS/Android. Formation pratique avec des projets concrets
+                            et une approche hands-on pour créer des apps performantes.</p>
+                        <button class="btn-detail">Details</button>
                     </article>
-                    
+
                     <article class="formation-card bas fade-in">
                         <h3>Administration Systèmes & Réseaux</h3>
-                          <img src="imgs/cisco.jpg" alt="Formation HTML CSS" />
-                          <p style="display: none;"> Formation en administration système, configuration réseau, et sécurité informatique. Devenez un technicien réseaux certifié avec des compétences reconnues par l'industrie et une expertise technique solide.</p>
-                          <button class="btn-detail">Details</button>
+                        <img src="imgs/cisco.jpg" alt="Formation HTML CSS" />
+                        <p style="display: none;"> Formation en administration système, configuration réseau, et
+                            sécurité informatique. Devenez un technicien réseaux certifié avec des compétences reconnues
+                            par l'industrie et une expertise technique solide.</p>
+                        <button class="btn-detail">Details</button>
                     </article>
-                    
+
                     <article class="formation-card bas fade-in">
                         <h3>Cybersécurité Avancée</h3>
-                          <img src="imgs/cyber.jpeg" alt="Formation HTML CSS" />
-                           <p style="display: none;">Spécialisez-vous dans la sécurité informatique : audit de sécurité, tests de pénétration, sécurité des réseaux et des applications. Formation certifiante pour devenir specialiste en cybersécurité avec des compétences recherchées par l'industrie actuelle.</p>
-                          <button class="btn-detail">Details</button>
+                        <img src="imgs/cyber.jpeg" alt="Formation HTML CSS" />
+                        <p style="display: none;">Spécialisez-vous dans la sécurité informatique : audit de sécurité,
+                            tests de pénétration, sécurité des réseaux et des applications. Formation certifiante pour
+                            devenir specialiste en cybersécurité avec des compétences recherchées par l'industrie
+                            actuelle.</p>
+                        <button class="btn-detail">Details</button>
                     </article>
 
-                      <article class="formation-card bas fade-in">
+                    <article class="formation-card bas fade-in">
                         <h3>Initiation à l'informatique</h3>
-                          <img src="imgs/formatique.jpeg" alt="Formation Informatique" />
-                           <p style="display: none;">Plonger dans l'univers de la culture numerique en marquant les premiers pas avec les ordinateurs et les outils de base de l'informatiques</p>
-                          <button class="btn-detail">Details</button>
+                        <img src="imgs/formatique.jpeg" alt="Formation Informatique" />
+                        <p style="display: none;">Plonger dans l'univers de la culture numerique en marquant les
+                            premiers pas avec les ordinateurs et les outils de base de l'informatiques</p>
+                        <button class="btn-detail">Details</button>
                     </article>
 
-                      <article class="formation-card bas fade-in">
+                    <article class="formation-card bas fade-in">
                         <h3>Cloud Computing</h3>
-                          <img src="imgs/cloud.webp" alt="Formation CLOUDCOMPT" />
-                           <p style="display: none;">Devenu l'épine dorsale du numerique moderne aujourd'hui le cloud est bien plus qu'un simple espace de stockage de nos données, un vrai moteur d'innovation, de flexibilité et de transformation pour les entreprises comme pour les particuliers.</p>
-                          <button class="btn-detail">Details</button>
+                        <img src="imgs/cloud.webp" alt="Formation CLOUDCOMPT" />
+                        <p style="display: none;">Devenu l'épine dorsale du numerique moderne aujourd'hui le cloud est
+                            bien plus qu'un simple espace de stockage de nos données, un vrai moteur d'innovation, de
+                            flexibilité et de transformation pour les entreprises comme pour les particuliers.</p>
+                        <button class="btn-detail">Details</button>
                     </article>
 
-                      <article class="formation-card bas fade-in">
+                    <article class="formation-card bas fade-in">
                         <h3>MasterClass</h3>
-                          <img src="imgs/materClasse.webp" alt="Formation MASTERCLASS" />
-                          <p style="display: none;">Nos masterclass, sont des raccourcis vers l'expérience des meilleurs qui ont de la place dans leurs métiers, un concentré de savoir, de stratégie et d'inspiration pour transformer une idée en business solide.</p>
-                          <button class="btn-detail">Details</button>
+                        <img src="imgs/materClasse.webp" alt="Formation MASTERCLASS" />
+                        <p style="display: none;">Nos masterclass, sont des raccourcis vers l'expérience des meilleurs
+                            qui ont de la place dans leurs métiers, un concentré de savoir, de stratégie et
+                            d'inspiration pour transformer une idée en business solide.</p>
+                        <button class="btn-detail">Details</button>
                     </article>
 
                     <article class="formation-card bas fade-in">
                         <h3>Maintenance Informatique</h3>
-                          <img src="imgs/depanage.webp" alt="Formation MAINTENANCE" />
-                          <p style="display: none;"> Pour la fiabilité et la Sécurité des systèmes apprends à prévenir les pannes, sécuriser les données, et garantir la continuité des opérations dans un environnement informatique dominé par des ordinateurs.</p>
-                          <button class="btn-detail">Details</button>
+                        <img src="imgs/depanage.webp" alt="Formation MAINTENANCE" />
+                        <p style="display: none;"> Pour la fiabilité et la Sécurité des systèmes apprends à prévenir les
+                            pannes, sécuriser les données, et garantir la continuité des opérations dans un
+                            environnement informatique dominé par des ordinateurs.</p>
+                        <button class="btn-detail">Details</button>
                     </article>
                 </div>
             </div>
         </section>
 
         <div class="modal" id="inscriptionModal">
-  <div class="modal-content">
-    <span class="close-btn" id="closeModal">&times;</span>
-    <h2 id="formationChoisie"></h2>
-                         
-    <p id="detail"></p>
-                
-  
-  </div>
-</div>
+            <div class="modal-content">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <h2 id="formationChoisie"></h2>
+
+                <p id="detail"></p>
+
+
+            </div>
+        </div>
     </main>
 
     <!-- Social Media -->
     <div class="social-media">
-        <a href="https://facebook.com/orrysnumeric" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://twitter.com/orrysnumeric" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://instagram.com/orrysnumeric" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/richel-oko-yoas-b9279319b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://wa.me/+242069215323" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/richel-oko-yoas-b9279319b/" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/+242069215323" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
+
+    <!-- A propos section -->
+         <section class="section apropos" id="apropos">
+                <div class="container">
+                    <h2 class="section-title fade-in">A PROPOS</h2>
+                    <div class="hero-content">
+                        <div class="hero-text slide-in-left">
+                            <!-- <h1>Description de l'entreprise</h1> -->
+                            <p class="subtitle">
+                                        <b>Nous</b> sommes une entreprise spécialisée en informatique. <br>
+                                         Nous développons des applications et des solutions web, telles que les sites web, des applications mobiles IOS/Android et d'autres services numeriques pour des particuliers et les entreprises.
+                            </p>
+                        </div>
+        
+                        <div class="hero-image slide-in-right">
+                        <img src="imgs/logo.png" alt="Logo ORRYS NUMERIC" />
+                        </div>
+                 </div>
+                    <p class="nous">
+                    </p>
+                </div>
+         </section>
 
     <!-- Footer -->
     <footer class="footer" id="contact">
-  <h5>Abonnez-vous pour ne rien rater de nos informations!</h5>
-       <div class="newsletter">
-       
-        <form id="contactForm" action="https://formspree.io/f/xanbwgoa" method="POST">
-              <div class="form-group">
-              <input type="text" id="nom" name="name" required placeholder="Votre nom et prénom" />
-            </div>
+        <h5>Abonnez-vous pour ne rien rater de nos informations!</h5>
+        <div class="newsletter">
 
-            <div class="form-group">
-            
-              <input type="email" id="mail" name="email" required placeholder="exemple@orrysnumeric.cg" />
-            </div>
-        
-            <button type="submit" class="submit-btn">
-              <i class="fas fa-paper-plane"></i> OK
-            </button>
-          </form>
+            <form id="contactForm" action="/newsLetter" method="POST">
+                <div class="form-group">
+                    <input type="text" id="nom" name="name" required placeholder="Votre nom et prénom" />
+                </div>
+
+                <div class="form-group">
+
+                    <input type="email" id="mail" name="email" required placeholder="exemple@orrysnumeric.cg" />
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> OK
+                </button>
+            </form>
         </div>
-      
 
-  <p>&copy; 2025 ORRYS NUMERIC - Tous droits réservés | Excellence Technologique</p>
+
+        <p>&copy; 2025 ORRYS NUMERIC - Tous droits réservés | Excellence Technologique</p>
     </footer>
-    
+
 </body>
+
 </html>
